@@ -1,10 +1,12 @@
+package Inventory;
+
 public class Product {
 
     private final String name;
     private double price;
     private int stock;
 
-    /** Initializer for Product.
+    /** Initializer for Inventory.Product.
      * @param name A name
      * @param price a price
      * @param stock A stock quantity
@@ -15,7 +17,7 @@ public class Product {
         this.stock = stock;
     }
 
-    /** Getter method for Product.
+    /** Getter method for Inventory.Product.
      * @return product name
      */
     public String getName() {

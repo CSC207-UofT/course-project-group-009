@@ -1,3 +1,9 @@
+package Inventory;
+
+import Inventory.Product;
+import Users.Administrator;
+import Users.Customer;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -8,7 +14,7 @@ public class InventorySystem {
 
 
     /**
-     * An initializer for InventorySystem.
+     * An initializer for Inventory.InventorySystem.
      */
     public InventorySystem(){
         this.inventory = new ArrayList<>();
@@ -29,9 +35,9 @@ public class InventorySystem {
     }
 
     /** Creates a customer.
-     * @param username Customer's username
-     * @param password Customer's password
-     * @return Customer
+     * @param username Users.Customer's username
+     * @param password Users.Customer's password
+     * @return Users.Customer
      */
     public Customer createCustomer(String username, String password){
         return new Customer(username, password);
@@ -39,9 +45,9 @@ public class InventorySystem {
 
 
     /** Creates an administrator.
-     * @param username Administrator's username
-     * @param password Administrator's password
-     * @return Administrator
+     * @param username Users.Administrator's username
+     * @param password Users.Administrator's password
+     * @return Users.Administrator
      */
     public Administrator createAdministrator(String username, String password){
         return new Administrator(username, password);
@@ -52,7 +58,7 @@ public class InventorySystem {
      * @param name product name
      * @param price product price
      * @param stock stock quantity
-     * @return Product
+     * @return Inventory.Product
      */
     public Product createProduct(String name, Double price, int stock){
         return new Product(name,price,stock);
@@ -131,7 +137,7 @@ public class InventorySystem {
     public String addToInventory(Administrator a, String name, double price, int quantity){
         if (!this.availability(name)){
             this.setInventory(createProduct(name, price, quantity));
-            return "Product has been successfully added to inventory.";
+            return "Inventory.Product has been successfully added to inventory.";
         }
         else {
             Product p = findProduct(name);

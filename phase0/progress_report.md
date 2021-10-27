@@ -8,17 +8,17 @@ An inventory management system for a wholesale business similar to Costco. There
 
 # Brief Summary of CRC cards
 
-The program contains **4 Entity Classes**, **2 Use Case classes**, **2 Controller classes**, **1 Gateway class** and **2 User Interface classes**. 
+The program contains **4 Entity Classes**, **2 Use Case classes**, **2 Controller classes**, **1 Gateway class** and **2 Users.User Interface classes**. 
 
-**Entity Classes**: `User`, `Administrator`, `Customer`, `Product`
+**Entity Classes**: `Users.User`, `Users.Administrator`, `Users.Customer`, `Inventory.Product`
 
-**Use Case Classes**: `InventorySystem`, `Membership`
+**Use Case Classes**: `Inventory.InventorySystem`, `Users.Membership`
 
 **Controller Classes**: `TransactionSystem`, `WholesaleMain`
 
 **Gateway Class**: `PromptIterator` 
 
-**User Interface classes**: `InputOutput`, `SystemInputOutput`
+**Users.User Interface classes**: `InputOutput`, `SystemInputOutput`
 
 **Note**:  For the presentation, have the CRC card pdf open.  
 
@@ -51,7 +51,7 @@ basic entity and use case classes.
 Created the `TransactionSystem` class and other basic classes. Plans on creating a command prompt text file for administrator and write corresponding code in the `initialize` method in `TransactionSystem`.
 
 **Yong Tong Zhu:**
-Created the  `Membership` class and `MembershipTest`.  Plans on creating command prompt text files for customers with memberships and write corresponding code in the `initialize` method in `TransactionSystem`.
+Created the  `Users.Membership` class and `MembershipTest`.  Plans on creating command prompt text files for customers with memberships and write corresponding code in the `initialize` method in `TransactionSystem`.
 
 **Yipu Lu:**
 Designed the initial entity and use case classes. Plans on adding a database to obtain a large number of products for the store inventory. 

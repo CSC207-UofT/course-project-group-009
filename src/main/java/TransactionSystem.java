@@ -1,3 +1,6 @@
+import Inventory.InventorySystem;
+import Users.Customer;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,7 +41,7 @@ public class TransactionSystem {
         insys.setInventory(insys.createProduct("orange", 0.50, 2000));
 
 
-        //We have written the code for the Customer side first. We will write the code for administrator after
+        //We have written the code for the Users.Customer side first. We will write the code for administrator after
         //Phase 0
         try {
             if (Objects.equals(responses.get(0), "customer")) {

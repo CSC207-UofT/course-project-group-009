@@ -1,12 +1,16 @@
-import java.util.HashMap;
+package Users;
 
-public class Customer extends User{
+import Users.Cart;
+import Users.User;
+import Inventory.Product;
+
+public class Customer extends User {
 
 
     private final Cart cart;
 
 
-    /** An initializer for Customer. Each instance of customer has a personal shopping cart.
+    /** An initializer for Users.Customer. Each instance of customer has a personal shopping cart.
      * @param username A customer's username
      * @param password A customer's password
      */
