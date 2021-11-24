@@ -1,22 +1,25 @@
 package uses;
 
+import prompts.PromptIterator;
 import users.Administrator;
 import users.Customer;
 import users.User;
+import Presenter.UserManagerPresenter;
+import Presenter.IUserManagerPresenter;
 
 import java.util.ArrayList;
 
 public class UserManager {
 
-    private UserManager um;
-
-    private UserFileReaderWriter uf = new UserFileReaderWriter();
-    private IUserSystemPresenter up;
+    private PromptIterator uf = new PromptIterator();
+    private IUserManagerPresenter ump;
 
     private final ArrayList<User> accounts;
 
     public UserManager() {
         this.accounts = new ArrayList<>();
+        ump = new UserManagerPresenter();
+
     }
 
     public ArrayList<User> getAccounts() {
@@ -51,12 +54,12 @@ public class UserManager {
     }
 
     public void register(String username, String password){
-        Customer c.register(username,password);
+        Customer c;register(username,password);
 
     }
 
     public void exit() {
-        uf.saveUserToFile(UserManager.userlist);
+        uf.saveUserToFile();
 
     }
 

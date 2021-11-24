@@ -2,7 +2,7 @@ package prompts;
 
 import java.io.*;
 import java.util.*;
-
+import java.util.ArrayList;
 
 public class PromptIterator implements Iterator<String> {
     private final List<String> prompts = new ArrayList<>();
@@ -13,7 +13,27 @@ public class PromptIterator implements Iterator<String> {
      * Prompts are read from a file and added to a list.
      * @param file A file containing prompts
      */
+
+    public void saveUserToFile(){
+        try
+        {
+            FileOutputStream fos = new FileOutputStream("UserData.ser");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(ArrayList);
+            oos.close();
+            fos.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+
+
     public PromptIterator(File file) {
+
+
 
         try {
             Scanner myReader = new Scanner(file);
