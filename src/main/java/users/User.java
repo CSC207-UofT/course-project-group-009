@@ -1,9 +1,9 @@
 package users;
+import java.io.Serializable;
+public class User implements Serializable{
 
-public abstract class User {
-
-    private final String username;
-    private final String password;
+    public String username;
+    public String password;
 
 
     /** An initializer for Uses.User
@@ -19,7 +19,11 @@ public abstract class User {
      * @return Users.Customer's username
      */
     public String getUsername() {
-        return this.username;
+        return username;
+    }
+
+    public void setUsername(String userid){
+        this.username = userid;
     }
 
     /** Getter method for user's password
@@ -27,5 +31,14 @@ public abstract class User {
      */
     public String getPassword() {
         return password;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    @Override
+    public String toString(){
+        return "username" + this.username;
     }
 }

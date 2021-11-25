@@ -13,7 +13,7 @@ public class UserManagerPresenter implements IUserManagerPresenter{
     @Override
     public void showLoginResponse(Boolean loginResult) {
         if(loginResult)
-            System.out.println("user successfully logined in");
+            System.out.println("user successfully log in");
         else
             System.out.println("login failed");
     }

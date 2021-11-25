@@ -1,24 +1,30 @@
 package uses;
 
-import prompts.PromptIterator;
-import users.Administrator;
-import users.Customer;
-import users.User;
+import controller.UserManagerController;
+import Gateway.UserReadWriter;
+import Gateway.UserReadWriter;
 import Presenter.UserManagerPresenter;
 import Presenter.IUserManagerPresenter;
+import UseCases.UserManaging;
 
 import java.util.ArrayList;
 
 public class UserManager {
 
-    private PromptIterator uf = new PromptIterator();
-    private IUserManagerPresenter ump;
+    private UserManagerController umc;
+    private UserManaging uming;
+    private UserReadWriter ufrw = new UserReadWriter();
+    private IUserManagerPresenter iump;
 
     private final ArrayList<User> accounts;
 
     public UserManager() {
         this.accounts = new ArrayList<>();
-        ump = new UserManagerPresenter();
+
+        ArrayList userList = ufrw.readUserFromFile()
+        iump = new UserManagerPresenter();
+        uming = new UserManager(userList, iump);
+        umc = new UserManagerController(uming);
 
     }
 
@@ -54,12 +60,16 @@ public class UserManager {
     }
 
     public void register(String username, String password){
-        Customer c;register(username,password);
+        umc.register(username,password);
 
     }
 
+    public void login(String username, String password){
+        umc.login(username, password);
+    }
+
     public void exit() {
-        uf.saveUserToFile();
+        ufrw.saveUserToFile(UserManaging.userlist);
 
     }
 

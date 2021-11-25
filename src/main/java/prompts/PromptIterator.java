@@ -9,10 +9,7 @@ public class PromptIterator implements Iterator<String> {
     private int current = 0;
 
 
-    /**
-     * Prompts are read from a file and added to a list.
-     * @param file A file containing prompts
-     */
+
 
     public void saveUserToFile(){
         try
@@ -30,6 +27,10 @@ public class PromptIterator implements Iterator<String> {
 
     }
 
+    /**
+     * Prompts are read from a file and added to a list.
+     * @param file A file containing prompts
+     */
 
     public PromptIterator(File file) {
 
@@ -71,9 +72,6 @@ public class PromptIterator implements Iterator<String> {
         current += 1;
         return result;
     }
-
-
-
-
+    
 
 }
