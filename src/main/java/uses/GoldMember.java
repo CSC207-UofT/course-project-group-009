@@ -1,6 +1,6 @@
 package uses;
 
-public class GoldMember<MembershipType> extends Membership {
+public class GoldMember extends Membership {
     /**
      * An initializer for Users.Membership.
      *
